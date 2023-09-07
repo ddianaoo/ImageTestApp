@@ -4,9 +4,8 @@ from .models import *
 
 
 class ImageAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title', 'get_photo', 'uploaded_at']
-    list_display_links = ['id', 'title', 'get_photo']
-    search_fields = ['title',]
+    list_display = ['id', 'get_photo', 'uploaded_at']
+    list_display_links = ['id', 'get_photo']
 
     def get_photo(self, obj):
         if obj.image:
